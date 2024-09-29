@@ -1,7 +1,8 @@
 import React from "react";
-import { Line } from "react-chartjs-2";
+import Chart1 from "../Chart1/Chart1";
+import Chart2 from "../Chart2/Chart2";
 
-function HomePage() {
+function HomePage(props) {
   return (
     <main id="main" className="container center">
       <div className="page-area">
@@ -66,13 +67,13 @@ function HomePage() {
         <article className="text-box">
           <h1>Chart</h1>
           <p>
-            <canvas id="myChart" width="400" height="400"></canvas>
+            <Chart1 budgetData={props.budgetData} />
           </p>
         </article>
 
         <article className="text-box">
           <h1>Chart 2</h1>
-          <p id="chart2"></p>
+          <Chart2 budgetData={props.budgetData} />
         </article>
       </div>
     </main>
